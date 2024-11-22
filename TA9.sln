@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34607.119
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceA", "ServiceA\ServiceA.csproj", "{FD5DEF15-31AC-45B0-9DC0-21AF9208D152}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceB", "ServiceB\ServiceB.csproj", "{A43FB8F7-BAA4-49BE-A1C6-A3738E3D1396}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{9C9E440B-6D9C-4E29-97B0-2FC9D9D0C39D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD5DEF15-31AC-45B0-9DC0-21AF9208D152}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD5DEF15-31AC-45B0-9DC0-21AF9208D152}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD5DEF15-31AC-45B0-9DC0-21AF9208D152}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD5DEF15-31AC-45B0-9DC0-21AF9208D152}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A43FB8F7-BAA4-49BE-A1C6-A3738E3D1396}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A43FB8F7-BAA4-49BE-A1C6-A3738E3D1396}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A43FB8F7-BAA4-49BE-A1C6-A3738E3D1396}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A43FB8F7-BAA4-49BE-A1C6-A3738E3D1396}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C9E440B-6D9C-4E29-97B0-2FC9D9D0C39D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C9E440B-6D9C-4E29-97B0-2FC9D9D0C39D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C9E440B-6D9C-4E29-97B0-2FC9D9D0C39D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C9E440B-6D9C-4E29-97B0-2FC9D9D0C39D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9FF1FECA-4AAC-419B-8CFB-F1A5FDFE71EA}
+	EndGlobalSection
+EndGlobal

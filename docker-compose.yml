@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  servicea:
+    build:
+      context: ./ServiceA
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+      - "5001:5001"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ServiceBUrl=ws://serviceb:5007/ws
+    depends_on:
+      - serviceb
+    networks:
+      - graph-network
+
+  serviceb:
+    build:
+      context: ./ServiceB
+      dockerfile: Dockerfile
+    ports:
+      - "5007:5007"
+      - "5008:5008"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=db;Database=GraphDB;User=sa;Password=YourPassword123!;TrustServerCertificate=True
+    depends_on:
+      - db
+    networks:
+      - graph-network
+
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "YourPassword123!"
+    ports:
+      - "1433:1433"
+    networks:
+      - graph-network
+
+networks:
+  graph-network:
+    driver: bridge
